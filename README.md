@@ -67,29 +67,32 @@ npm run dev
 
 ## 🏰 ARCHITECTURE
 
-```text
-midnight-cafe/
-├── public/                 # The cafe's front door
-│
-└── src/                    # The hidden kitchen
-    ├── assets/             # Fresh ingredients
-    │   └── images/         # Visual spices
-    │
-    ├── components/         # Preparation stations
-    │   ├── Menu/           # Chef's creations
-    │   ├── Gallery/        # Food artistry
-    │   └── ...             # Other stations
-    │
-    ├── hooks/              # Special utensils
-    ├── styles/             # Plating design
-    ├── App.css             # Master recipe
-    ├── App.jsx             # Head chef
-    └── index.jsx           # The first sip
-```
+├── public/
+├── src/
+│   ├── assets/
+│   │   └── images/
+│   ├── components/
+│   │   ├── About/
+│   │   ├── App/
+│   │   ├── Events/
+│   │   ├── Footer/
+│   │   ├── Gallery/
+│   │   ├── Header/
+│   │   ├── Hero/
+│   │   ├── Loader/
+│   │   ├── Menu/
+│   │   ├── Reservation/
+│   │   ├── Specials/
+│   │   ├── Testimonials/
+│   │   └── cartSidebar/
+│   ├── hooks/
+│   ├── styles/
+│   ├── App.css
+│   ├── App.jsx
+│   └── index.jsx
 
 ## 🎨 THEME CUSTOMIZATION
 
-```css
 /* src/styles/variables.css */
 :root {
   --midnight: #121212;      /* The witching hour */
@@ -97,7 +100,6 @@ midnight-cafe/
   --moonlight: #D4AF37;    /* Liquid gold */
   --transition: 0.4s ease; /* The pace of night */
 }
-```
 
 > 🎭 **Theme Ideas:** Try `--moonlight: #C19A6B` for rose gold or `--midnight: #1A1A2E` for navy elegance
 
@@ -145,4 +147,3 @@ Served under the [MIT License](LICENSE) - because great code, like fine wine, sh
   <br>
   <em>Until we meet under the moonlight...</em> 👨‍🍳✨
 </p>
-```
