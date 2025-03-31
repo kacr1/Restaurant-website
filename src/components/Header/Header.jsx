@@ -89,7 +89,7 @@ const Header = ({ darkMode, toggleDarkMode }) => {
               <GiGalaxy className="logo-icon" />
             </motion.div>
             <div className="logo-text-container">
-              <span className="logo-text">Cosmic Bites</span>
+              <span className="logo-text">Midnight Cafe</span>
               <span className="logo-subtext">Intergalactic Cuisine</span>
             </div>
             <div className="logo-glow"></div>
