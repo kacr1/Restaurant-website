@@ -5,7 +5,7 @@ import {
   FaSignOutAlt, FaCog, FaHistory, FaHeart,
   FaCreditCard, FaMapMarkerAlt, FaQuestionCircle
 } from 'react-icons/fa';
-import './User.css';
+import './user.css';
 
 const User = ({ onClose, darkMode }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
