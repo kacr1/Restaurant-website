@@ -6,8 +6,8 @@ import {
 } from 'react-icons/fa';
 import { GiGalaxy } from 'react-icons/gi';
 import { motion, AnimatePresence } from 'framer-motion';
-import User from './User.jsx';
-import './Header.css';
+import User from './user.jsx';
+import './header.css';
 
 const Header = ({ darkMode, toggleDarkMode }) => {
   const [isScrolled, setIsScrolled] = useState(false);
