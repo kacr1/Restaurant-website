@@ -1,11 +1,10 @@
-# 🌑 MIDNIGHT CAFÉ ✨
+# 🌑 MIDNIGHT RESTAURANT 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-gold.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![React](https://img.shields.io/badge/React-18-61DAFB.svg?style=for-the-badge&logo=react)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-4.3-646CFF.svg?style=for-the-badge&logo=vite)](https://vitejs.dev/)
 [![Netlify](https://img.shields.io/badge/Netlify-Live-00C7B7.svg?style=for-the-badge&logo=netlify)](https://midnight-cafe.netlify.app/)
 
-> *"Where the moon guides your culinary journey and every click unveils a new delight..."*
 
 ## 🌌 Overview
 
@@ -27,7 +26,7 @@ Midnight Café is an elegant restaurant website featuring a sophisticated noctur
 
 ## 🚀 Live Demo
 
-Experience the Midnight restraurant at our [live site](https://restaurant-web-layout.netlify.app/).
+Experience the Midnight restaurant at our [live site](https://restaurant-web-layout.netlify.app/).
 
 ## 🛠️ Tech Stack
 
