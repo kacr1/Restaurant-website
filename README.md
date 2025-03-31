@@ -5,12 +5,6 @@
 [![Vite](https://img.shields.io/badge/Vite-4.3-646CFF.svg?style=for-the-badge&logo=vite)](https://vitejs.dev/)
 [![Netlify](https://img.shields.io/badge/Netlify-Live-00C7B7.svg?style=for-the-badge&logo=netlify)](https://midnight-cafe.netlify.app/)
 
-<p align="center">
-  <img src="https://media.giphy.com/media/3o7aD2d7hy9ktXNDP2/giphy.gif" width="150">
-  <img src="https://media.giphy.com/media/xUA7bdpLxQhsSQdyog/giphy.gif" width="150">
-  <img src="https://media.giphy.com/media/Z9WQLSrsQKHw4lPy3B/giphy.gif" width="150">
-</p>
-
 > *"Where the moon guides your culinary journey and every click unveils a new delight..."*
 
 ## 🌌 Overview
@@ -33,7 +27,7 @@ Midnight Café is an elegant restaurant website featuring a sophisticated noctur
 
 ## 🚀 Live Demo
 
-Experience the Midnight Café at our [live site](https://midnight-cafe.netlify.app/).
+Experience the Midnight restraurant at our [live site](https://restaurant-web-layout.netlify.app/).
 
 ## 🛠️ Tech Stack
 
@@ -54,10 +48,10 @@ Experience the Midnight Café at our [live site](https://midnight-cafe.netlify.a
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/midnight-cafe.git
+git clone https://github.com/NishulDhakar/Restaurant-website.git
 
 # Navigate to project directory
-cd midnight-cafe
+cd Restaurant-website
 
 # Install dependencies
 npm install
@@ -134,13 +128,13 @@ This project is served under the [MIT License](LICENSE) - because great code, li
 ## 🌠 Contact
 
 <p align="center">
-  <a href="https://twitter.com/yourtwitterhandle">
+  <a href="https://twitter.com/Nishuldhakar">
     <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
   </a>
-  <a href="https://yourportfolio.com">
-    <img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=portfolio&logoColor=white">
-  </a>
-  <a href="https://github.com/yourusername">
+ <a href="https://www.linkedin.com/in/nishuldhakar">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+</a>
+  <a href="https://github.com/nishuldhakar">
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github">
   </a>
 </p>
