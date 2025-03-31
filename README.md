@@ -18,12 +18,10 @@ A modern, responsive restaurant website built with React and Vite, featuring an 
 - ✨ **Smooth Animations & Transitions** for enhanced user experience
 - 🖼️ **Image Gallery** showcasing restaurant ambiance and signature dishes
 - 💬 **Customer Testimonials** carousel highlighting dining experiences
-- 📰 **Newsletter Subscription** for customer engagement
-- 📱 **Instagram Feed Integration** for social media presence
 
 ## 🚀 Demo
 
-[View Live Demo](https://midnight-cafe.vercel.app) • [Video Walkthrough](https://youtu.be/demo-link)
+[View Live Demo](https://restaurant-web-layout.netlify.app/) 
 
 ## 🛠️ Technologies Used
 
@@ -46,18 +44,14 @@ A modern, responsive restaurant website built with React and Vite, featuring an 
 2. **Install dependencies**
    ```bash
    npm install
-   # or
-   yarn install
    ```
 
 3. **Start the development server**
    ```bash
    npm run dev
-   # or
-   yarn dev
    ```
 
-4. **Open your browser** at `http://localhost:3000`
+4. **Open your browser** at `http://localhost:5173`
 
 ## 📁 Project Structure
 
@@ -73,11 +67,8 @@ src/
 │   ├── Testimonials/      # Customer reviews carousel
 │   ├── Gallery/           # Photo gallery
 │   ├── Events/            # Upcoming events
-│   ├── Instagram/         # Instagram feed
-│   ├── Newsletter/        # Email subscription
 │   ├── Footer/            # Site footer
 │   ├── Loader/            # Loading animation
-│   └── BackToTop/         # Scroll to top button
 ├── styles/                # Global styles and variables
 ├── assets/                # Images and static files
 ├── App.jsx                # Main application component
@@ -118,23 +109,6 @@ const menuData = {
 };
 ```
 
-## 🚢 Deployment
-
-To build for production:
-
-```bash
-npm run build
-# or
-yarn build
-```
-
-The build artifacts will be in the `dist/` directory, ready for deployment to:
-
-- [Vercel](https://vercel.com)
-- [Netlify](https://netlify.com)
-- [GitHub Pages](https://pages.github.com)
-- Any static hosting service
-
 ## 📱 Mobile Responsiveness
 
 The website is fully responsive and optimized for:
@@ -163,10 +137,10 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 📞 Contact
 
-Your Name - [@yourtwitter](https://twitter.com/yourhandle) - your.email@example.com
+Your Name - [@nishuldhakar](https://twitter.com/nishuldhakar) 
 
 Project Link: [https://github.com/your-username/midnight-cafe](https://github.com/your-username/midnight-cafe)
 
 ---
 
-Made with ❤️ by [Your Name](https://your-portfolio.com)
+Made with ❤️ by [Nishul dhakar](https://your-portfolio.com)
