@@ -8,7 +8,7 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import rajuImg from '../../assets/images/raju.jpg';
+import rajuImg from '../../assets/images/Raju.jpg';
 import bhaghaImg from '../../assets/images/Bhagha.jpg';
 import sanjuImg from '../../assets/images/sanju.jpg';
 
