@@ -1,4 +1,3 @@
-```markdown
 # 🌑 MIDNIGHT CAFÉ ✨
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-gold.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
@@ -62,7 +61,7 @@ npm install
 
 # Start development server (light the candles)
 npm run dev
-```
+
 
 > 💡 **Pro Tip:** Add `--host` to share your local preview across devices!
 
