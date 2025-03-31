@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-gold.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![React](https://img.shields.io/badge/React-18-61DAFB.svg?style=for-the-badge&logo=react)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-4.3-646CFF.svg?style=for-the-badge&logo=vite)](https://vitejs.dev/)
-[![Netlify](https://img.shields.io/badge/Netlify-Live-00C7B7.svg?style=for-the-badge&logo=netlify)](https://restaurant-web-layout.netlify.app/)
+[![Netlify](https://img.shields.io/badge/Netlify-Live-00C7B7.svg?style=for-the-badge&logo=netlify)](https://midnight-cafe.netlify.app/)
 
 <p align="center">
   <img src="https://media.giphy.com/media/3o7aD2d7hy9ktXNDP2/giphy.gif" width="150">
@@ -13,29 +13,29 @@
 
 > *"Where the moon guides your culinary journey and every click unveils a new delight..."*
 
-## 🌌 IMMERSE YOURSELF IN THE NIGHT
+## 🌌 Overview
+
+Midnight Café is an elegant restaurant website featuring a sophisticated nocturnal theme. The site combines modern web technologies with an immersive user experience to create a digital representation of a high-end dining establishment.
+
+## ✨ Key Features
 
 <div align="center">
   
-| Feature | Description | Preview |
-|---------|-------------|---------|
-| **🌙 Nocturnal UI** | Sophisticated dark theme with dynamic golden accents | <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcW5mZ3V5Z3R0d2FqY2N6dG5mY3F5bHh1dGZ6d3F1ZzR0b2RzY3Z1ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7abKhOpu0NwenH3O/giphy.gif" width="150"> |
-| **🍷 Interactive Sommelier** | AI-powered drink pairing suggestions | <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWZ5bW5xY2V1Z2NqZ2NqZ2NqZ2NqZ2NqZ2NqZ2NqZ2NqZ2NqZ2NqZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7aD2d7hy9ktXNDP2/giphy.gif" width="150"> |
-| **📅 Moon Phase Reservations** | Book tables aligned with lunar cycles | <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWZ5bW5xY2V1Z2NqZ2NqZ2NqZ2NqZ2NqZ2NqZ2NqZ2NqZ2NqZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7abKhOpu0NwenH3O/giphy.gif" width="150"> |
+| Feature | Description |
+|---------|-------------|
+| **🌙 Nocturnal UI** | Sophisticated dark theme with dynamic golden accents |
+| **🍷 Interactive Sommelier** | AI-powered drink pairing suggestions |
+| **📅 Moon Phase Reservations** | Book tables aligned with lunar cycles |
+| **🖼️ Immersive Gallery** | Visual storytelling through elegant photography |
+| **🍽️ Dynamic Menu** | Interactive food and beverage presentation |
 
 </div>
 
-## 🚀 LIVE PREVIEW
+## 🚀 Live Demo
 
-<p align="center">
-  <a href="https://restaurant-web-layout.netlify.app/">
-    <img src="https://media.giphy.com/media/3o7abKhOpu0NwenH3O/giphy.gif" width="500">
-    <br>
-    <strong>✨ Step Into The Night ✨</strong>
-  </a>
-</p>
+Experience the Midnight Café at our [live site](https://midnight-cafe.netlify.app/).
 
-## 🛠️ TECH STACK
+## 🛠️ Tech Stack
 
 <div align="center">
 
@@ -50,22 +50,27 @@
 
 </div>
 
-## 🧙‍♂️ QUICK START
+## 🧙‍♂️ Quick Start
 
-# Clone the repository (like a shadow in the night)
-git clone https://github.com/nishuldhakar/Restaurant-website.git && cd Restaurant-website
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/midnight-cafe.git
 
-# Install dependencies (gather the ingredients)
+# Navigate to project directory
+cd midnight-cafe
+
+# Install dependencies
 npm install
 
-# Start development server (light the candles)
+# Start development server
 npm run dev
-
+```
 
 > 💡 **Pro Tip:** Add `--host` to share your local preview across devices!
 
-## 🏰 ARCHITECTURE
+## 🏰 Project Structure
 
+```
 ├── public/
 ├── src/
 │   ├── assets/
@@ -83,15 +88,17 @@ npm run dev
 │   │   ├── Reservation/
 │   │   ├── Specials/
 │   │   ├── Testimonials/
-│   │   └── cartSidebar/
+│   │   └── CartSidebar/
 │   ├── hooks/
 │   ├── styles/
 │   ├── App.css
 │   ├── App.jsx
 │   └── index.jsx
+```
 
-## 🎨 THEME CUSTOMIZATION
+## 🎨 Theme Customization
 
+```css
 /* src/styles/variables.css */
 :root {
   --midnight: #121212;      /* The witching hour */
@@ -99,44 +106,41 @@ npm run dev
   --moonlight: #D4AF37;    /* Liquid gold */
   --transition: 0.4s ease; /* The pace of night */
 }
+```
 
 > 🎭 **Theme Ideas:** Try `--moonlight: #C19A6B` for rose gold or `--midnight: #1A1A2E` for navy elegance
 
-## 📱 RESPONSIVE DESIGN
+## 📱 Responsive Design
 
-<p align="center">
-  <img src="https://media.giphy.com/media/Z9WQLSrsQKHw4lPy3B/giphy.gif" width="400">
-</p>
-
-**Adapts seamlessly to:**
+The Midnight Café experience adapts seamlessly to:
 - 📱 **Mobile** (Vertical tasting menu)
 - 💻 **Tablet** (Two-column presentation)
 - 🖥️ **Desktop** (Full culinary theater)
 
-## 🤝 JOIN OUR KITCHEN
+## 🤝 Contributing
 
 We welcome contributors like moonlight welcomes stars:
 
-1. 🍴 Fork our recipe book
-2. 👨‍🍳 Create your branch (`git checkout -b feature/midnight-magic`)
-3. 🧂 Season to taste (make your changes)
-4. 📸 Plate beautifully (commit with style)
-5. 🚀 Send for review (open a PR)
+1. 🍴 Fork the repository
+2. 👨‍🍳 Create your feature branch (`git checkout -b feature/amazing-addition`)
+3. 🧂 Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. 📸 Push to the branch (`git push origin feature/amazing-addition`)
+5. 🚀 Open a Pull Request
 
-## 📜 LICENSE
+## 📜 License
 
-Served under the [MIT License](LICENSE) - because great code, like fine wine, should be shared.
+This project is served under the [MIT License](LICENSE) - because great code, like fine wine, should be shared.
 
-## 🌠 ABOUT THE CHEF
+## 🌠 Contact
 
 <p align="center">
-  <a href="https://twitter.com/nishuldhakar">
+  <a href="https://twitter.com/yourtwitterhandle">
     <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white">
   </a>
-  <a href="https://project-folio-chi.vercel.app/">
+  <a href="https://yourportfolio.com">
     <img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=portfolio&logoColor=white">
   </a>
-  <a href="https://github.com/nishuldhakar">
+  <a href="https://github.com/yourusername">
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github">
   </a>
 </p>
