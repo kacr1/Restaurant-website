@@ -52,7 +52,6 @@
 
 ## 🧙‍♂️ QUICK START
 
-```bash
 # Clone the repository (like a shadow in the night)
 git clone https://github.com/nishuldhakar/Restaurant-website.git && cd Restaurant-website
 
