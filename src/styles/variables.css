@@ -1,0 +1,229 @@
+:root {
+  /* ===== Color Palette ===== */
+  /* Primary Cosmic Colors */
+  --cosmic-primary: #3a0ca3;
+  --cosmic-primary-light: #4c1dcd;
+  --cosmic-primary-dark: #24086a;
+  --cosmic-primary-transparent-10: rgba(58, 12, 163, 0.1);
+  --cosmic-primary-transparent-20: rgba(58, 12, 163, 0.2);
+  --cosmic-primary-transparent-40: rgba(58, 12, 163, 0.4);
+  
+  /* Secondary Midnight Colors */
+  --cosmic-secondary: #14213d;
+  --cosmic-secondary-light: #1d2e53;
+  --cosmic-secondary-dark: #0d172b;
+  --cosmic-secondary-transparent-10: rgba(20, 33, 61, 0.1);
+  
+  /* Accent Gold Colors */
+  --cosmic-accent: #fca311;
+  --cosmic-accent-light: #ffd166;
+  --cosmic-accent-lighter: #ffe8b6;
+  --cosmic-accent-dark: #d68910;
+  --cosmic-accent-darker: #b87308;
+  --cosmic-accent-transparent-10: rgba(252, 163, 17, 0.1);
+  --cosmic-accent-transparent-20: rgba(252, 163, 17, 0.2);
+  
+  /* Neutral Colors */
+  --cosmic-light: #f8f9fa;
+  --cosmic-light-secondary: #f8edeb;
+  --cosmic-dark: #0a0a0a;
+  --cosmic-darker: #070707;
+  --cosmic-darkest: #030303;
+  --cosmic-gray-100: #f3f4f6;
+  --cosmic-gray-200: #e5e7eb;
+  --cosmic-gray-300: #d1d5db;
+  --cosmic-gray-400: #9ca3af;
+  --cosmic-gray-500: #6b7280;
+  --cosmic-gray-600: #4b5563;
+  --cosmic-gray-700: #374151;
+  
+  /* Semantic Colors */
+  --cosmic-success: #10b981;
+  --cosmic-warning: #f59e0b;
+  --cosmic-error: #ef4444;
+  --cosmic-info: #3b82f6;
+  
+  /* Text Colors */
+  --text-primary: rgba(248, 249, 250, 0.95);
+  --text-secondary: rgba(248, 249, 250, 0.7);
+  --text-tertiary: rgba(248, 249, 250, 0.5);
+  --text-dark: #333;
+  --text-on-light: #1f2937;
+  --text-on-dark: #f9fafb;
+  --text-on-accent: #1f2937;
+
+  /* ===== Gradients ===== */
+  --gradient-primary: linear-gradient(
+    135deg, 
+    var(--cosmic-primary) 0%, 
+    var(--cosmic-primary-light) 100%
+  );
+  
+  --gradient-accent: linear-gradient(
+    135deg, 
+    var(--cosmic-accent) 0%, 
+    var(--cosmic-accent-light) 50%, 
+    var(--cosmic-accent) 100%
+  );
+  
+  --gradient-dark: linear-gradient(
+    135deg, 
+    var(--cosmic-dark) 0%, 
+    var(--cosmic-darker) 100%
+  );
+  
+  --gradient-cosmic: linear-gradient(
+    135deg, 
+    var(--cosmic-primary) 0%, 
+    var(--cosmic-secondary) 100%
+  );
+  
+  --gradient-golden-cosmic: linear-gradient(
+    135deg, 
+    var(--cosmic-primary) 0%, 
+    var(--cosmic-secondary) 50%,
+    var(--cosmic-accent) 100%
+  );
+
+  /* ===== Typography ===== */
+  --font-display: 'Playfair Display', serif;
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Poppins', sans-serif;
+  --font-accent: 'Dancing Script', cursive;
+  --font-mono: 'Roboto Mono', monospace;
+  
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Font Sizes - Fluid Typography */
+  --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --text-sm: clamp(0.875rem, 0.825rem + 0.25vw, 1rem);
+  --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --text-lg: clamp(1.125rem, 1.05rem + 0.375vw, 1.25rem);
+  --text-xl: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+  --text-2xl: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+  --text-3xl: clamp(2rem, 1.7rem + 1.5vw, 2.5rem);
+  --text-4xl: clamp(2.5rem, 2rem + 2.5vw, 3.5rem);
+  --text-5xl: clamp(3rem, 2.5rem + 2.5vw, 4rem);
+  
+  /* Line Heights */
+  --leading-tight: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.75;
+  --leading-loose: 2;
+
+  /* ===== Spacing System ===== */
+  --space-3xs: 0.125rem;
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  --space-5xl: 8rem;
+  
+  /* ===== Shadows ===== */
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  
+  /* Special Glow Effects */
+  --glow-primary: 0 0 10px var(--cosmic-primary-transparent-20);
+  --glow-accent: 0 0 15px var(--cosmic-accent-transparent-20);
+  --glow-combined: 0 0 10px var(--cosmic-primary-transparent-20), 
+                  0 0 15px var(--cosmic-accent-transparent-20);
+
+  /* ===== Transitions & Animations ===== */
+  --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: all 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  
+  /* Animation Durations */
+  --duration-75: 75ms;
+  --duration-100: 100ms;
+  --duration-150: 150ms;
+  --duration-200: 200ms;
+  --duration-300: 300ms;
+  --duration-500: 500ms;
+  --duration-700: 700ms;
+  --duration-1000: 1000ms;
+  
+  /* ===== Border Radius ===== */
+  --radius-none: 0;
+  --radius-xs: 0.125rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 2rem;
+  --radius-full: 9999px;
+  
+  /* ===== Z-Index ===== */
+  --z-auto: auto;
+  --z-negative: -1;
+  --z-0: 0;
+  --z-10: 10;
+  --z-20: 20;
+  --z-30: 30;
+  --z-40: 40;
+  --z-50: 50;
+  --z-max: 2147483647;
+  
+  /* ===== Layout ===== */
+  --max-width-xs: 20rem;
+  --max-width-sm: 24rem;
+  --max-width-md: 28rem;
+  --max-width-lg: 32rem;
+  --max-width-xl: 36rem;
+  --max-width-2xl: 42rem;
+  --max-width-3xl: 48rem;
+  --max-width-4xl: 56rem;
+  --max-width-5xl: 64rem;
+  --max-width-6xl: 72rem;
+  --max-width-7xl: 80rem;
+  --max-width-full: 100%;
+  
+  /* Breakpoints */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  
+  /* Container Padding */
+  --container-padding: clamp(1rem, 5vw, 2rem);
+}
+
+/* ===== Dark/Light Mode Variables ===== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-primary: rgba(248, 249, 250, 0.95);
+    --text-secondary: rgba(248, 249, 250, 0.7);
+    --text-tertiary: rgba(248, 249, 250, 0.5);
+    --text-on-light: #f9fafb;
+    --text-on-dark: #1f2937;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-primary: rgba(10, 10, 10, 0.95);
+    --text-secondary: rgba(10, 10, 10, 0.7);
+    --text-tertiary: rgba(10, 10, 10, 0.5);
+    --text-on-light: #1f2937;
+    --text-on-dark: #f9fafb;
+  }
+}

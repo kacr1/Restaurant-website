@@ -1,0 +1,162 @@
+:root {
+  --loader-size: 100px;
+  --loader-border: 6px;
+  --loader-animation-duration: 1.8s;
+  --gold: #d4af37;
+  --gold-light: #f1e5ac;
+  --gold-dark: #a67c00;
+  --text-light: rgba(255, 255, 255, 0.9);
+}
+
+.loader {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  display: grid;
+  place-items: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.6s cubic-bezier(0.65, 0, 0.35, 1), visibility 0.6s;
+  perspective: 1000px;
+}
+
+.loader-content {
+  display: grid;
+  gap: 2rem;
+  place-items: center;
+  text-align: center;
+  transform-style: preserve-3d;
+}
+
+.loader-spinner {
+  position: relative;
+  width: var(--loader-size);
+  height: var(--loader-size);
+  border-radius: 50%;
+  will-change: transform;
+}
+
+.loader-spinner::before,
+.loader-spinner::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  inset: 0;
+}
+
+.loader-spinner::before {
+  border: var(--loader-border) solid rgba(212, 175, 55, 0.1);
+  animation: pulse var(--loader-animation-duration) ease-in-out infinite;
+}
+
+.loader-spinner::after {
+  border: var(--loader-border) solid transparent;
+  border-top-color: var(--gold);
+  border-right-color: var(--gold);
+  animation: spin var(--loader-animation-duration) cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+}
+
+.loader-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(var(--loader-size) / 2);
+  height: calc(var(--loader-size) / 2);
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23d4af37"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
+  z-index: 2;
+}
+
+.loader-text {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--gold-light);
+  letter-spacing: 0.15em;
+  font-weight: 300;
+  text-transform: uppercase;
+  animation: fadeInOut 2.4s ease-in-out infinite;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.loader-progress {
+  width: 80%;
+  max-width: 200px;
+  height: 4px;
+  background: rgba(212, 175, 55, 0.2);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.loader-progress::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  animation: progress var(--loader-animation-duration) ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(1turn); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.7; }
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0.7; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(-5px); }
+}
+
+@keyframes progress {
+  0% { width: 0; left: 0; }
+  50% { width: 100%; left: 0; }
+  100% { width: 0; left: 100%; }
+}
+
+/* Accessibility improvements */
+.loader[aria-hidden="true"] {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .loader-spinner::before,
+  .loader-spinner::after {
+    animation: none;
+    border-top-style: dashed;
+  }
+  
+  .loader-text {
+    animation: none;
+    opacity: 1;
+  }
+  
+  .loader-progress::after {
+    animation: none;
+    width: 100%;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  :root {
+    --loader-size: 80px;
+    --loader-border: 5px;
+  }
+  
+  .loader-content {
+    gap: 1.5rem;
+  }
+}

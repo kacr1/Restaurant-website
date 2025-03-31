@@ -1,0 +1,406 @@
+/* Cosmic Restaurant Base Styles - Ultra Enhanced */
+@import './variables.css';
+
+/* === Cosmic Base Reset === */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background: var(--darkest);
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  background: 
+    radial-gradient(ellipse at top, var(--midnight-blue) 0%, var(--darkest) 100%),
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.05 0"/></filter><rect width="100%" height="100%" filter="url(%23noise)" opacity="0.3"/></svg>');
+  background-blend-mode: overlay;
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+/* === Cosmic Typography === */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--space-md);
+  color: var(--starlight);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h1 { 
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  letter-spacing: -0.05em;
+  background: linear-gradient(to right, var(--gold), var(--gold-light));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+h2 { 
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  letter-spacing: -0.03em;
+  position: relative;
+  display: inline-block;
+}
+
+h3 { 
+  font-size: clamp(1.75rem, 3.5vw, 2.2rem);
+  background: linear-gradient(to right, var(--text-light), var(--starlight));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+h4 { 
+  font-size: clamp(1.5rem, 3vw, 1.8rem);
+}
+
+p {
+  margin-bottom: var(--space-md);
+  font-size: 1.1rem;
+  color: var(--text-light);
+  max-width: 65ch;
+}
+
+.lead {
+  font-size: 1.25rem;
+  color: var(--text-lighter);
+}
+
+/* === Cosmic Links === */
+a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: var(--transition-fast);
+  position: relative;
+  background: linear-gradient(to right, var(--gold), var(--gold-light));
+  background-size: 0 2px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  padding-bottom: 2px;
+}
+
+a:hover {
+  color: var(--gold-light);
+  background-size: 100% 2px;
+}
+
+/* === Cosmic Images === */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: var(--transition-normal);
+}
+
+.img-glow {
+  box-shadow: 0 0 20px rgba(252, 163, 17, 0.3);
+  border: 1px solid rgba(252, 163, 17, 0.2);
+}
+
+.img-glow:hover {
+  box-shadow: 0 0 30px rgba(252, 163, 17, 0.5);
+  transform: scale(1.02);
+}
+
+/* === Cosmic Layout Components === */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+  position: relative;
+}
+
+.section {
+  padding: var(--space-xxl) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: var(--gold-gradient);
+  z-index: 1;
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: var(--space-xl);
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background: var(--gold-gradient);
+  border-radius: 3px;
+  animation: linePulse 3s infinite ease-in-out;
+}
+
+@keyframes linePulse {
+  0%, 100% { 
+    width: 80px;
+    opacity: 1;
+  }
+  50% { 
+    width: 120px;
+    opacity: 0.8;
+  }
+}
+
+/* === Cosmic Buttons === */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-xl);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: var(--transition-normal);
+  cursor: pointer;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transform-style: preserve-3d;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    var(--gold) 0%,
+    var(--gold-light) 50%,
+    var(--gold) 100%
+  );
+  background-size: 200% auto;
+  z-index: -1;
+  transition: var(--transition-normal);
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.2),
+    transparent
+  );
+  transition: var(--transition-slow);
+  z-index: 1;
+}
+
+.btn:hover::before {
+  background-position: right center;
+}
+
+.btn:hover::after {
+  left: 100%;
+}
+
+.btn-primary {
+  color: var(--dark);
+  box-shadow: 
+    0 4px 15px rgba(252, 163, 17, 0.3),
+    0 0 0 1px rgba(252, 163, 17, 0.2);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 
+    0 8px 25px rgba(252, 163, 17, 0.4),
+    0 0 0 1px rgba(252, 163, 17, 0.3);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--gold);
+  border: 2px solid var(--gold);
+  box-shadow: none;
+}
+
+.btn-outline::before {
+  background: var(--gold);
+  opacity: 0;
+}
+
+.btn-outline:hover {
+  color: var(--dark);
+}
+
+.btn-outline:hover::before {
+  opacity: 1;
+}
+
+/* === Cosmic Utility Classes === */
+.text-center { text-align: center; }
+.text-gold { 
+  color: var(--gold);
+  text-shadow: 0 0 10px rgba(252, 163, 17, 0.3);
+}
+
+.bg-dark { 
+  background-color: var(--dark);
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-dark::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 70% 30%, rgba(252, 163, 17, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bg-darker { 
+  background-color: var(--darker);
+  position: relative;
+}
+
+.bg-darker::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 70%, rgba(58, 12, 163, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* === Cosmic Animations === */
+@keyframes fadeIn {
+  from { 
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cosmicFloat {
+  0%, 100% { 
+    transform: translateY(0) rotate(0deg);
+  }
+  50% { 
+    transform: translateY(-10px) rotate(2deg);
+  }
+}
+
+/* === Cosmic Responsive Adjustments === */
+@media (max-width: 992px) {
+  .section {
+    padding: var(--space-xl) 0;
+  }
+  
+  h1 {
+    font-size: clamp(2.2rem, 5vw, 3rem);
+  }
+  
+  h2 {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: var(--space-lg) 0;
+  }
+  
+  .btn {
+    padding: var(--space-xs) var(--space-md);
+    font-size: 0.9rem;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: 15px;
+  }
+  
+  .section-title::after {
+    bottom: -8px;
+    height: 2px;
+  }
+}
+
+/* Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .section-title::after {
+    animation: none !important;
+  }
+}

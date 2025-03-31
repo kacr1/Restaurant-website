@@ -1,0 +1,442 @@
+:root {
+  --gold: #d4af37;
+  --gold-light: #f1e5ac;
+  --gold-dark: #a67c00;
+  --dark: #1a1a1a;
+  --darker: #0e0e0e;
+  --darkest: #0a0a0a;
+  --text: #f8f8f8;
+  --text-light: rgba(255, 255, 255, 0.9);
+  --text-lighter: rgba(255, 255, 255, 0.7);
+  --border: rgba(212, 175, 55, 0.3);
+  --radius: 8px;
+  --radius-lg: 12px;
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --transition-slow: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  --glow: 0 0 15px rgba(212, 175, 55, 0.3);
+  --glow-lg: 0 0 25px rgba(212, 175, 55, 0.4);
+}
+
+.reservation-section {
+  padding: 120px 0;
+  background: linear-gradient(135deg, var(--darkest) 0%, var(--darker) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.reservation-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+  z-index: 1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.reservation-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.reservation-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: var(--gold-light);
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--gold);
+  border-radius: 2px;
+}
+
+.reservation-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-lighter);
+  margin-bottom: 40px;
+}
+
+.contact-info {
+  margin-bottom: 40px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  color: var(--text-light);
+  transition: var(--transition);
+}
+
+.contact-item:hover {
+  transform: translateX(5px);
+}
+
+.contact-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  color: var(--gold);
+  font-size: 18px;
+  transition: var(--transition);
+}
+
+.contact-item:hover .contact-icon {
+  background: rgba(212, 175, 55, 0.2);
+  transform: scale(1.1);
+  box-shadow: var(--glow);
+}
+
+.hours h4 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: var(--gold-light);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hours-icon {
+  font-size: 18px;
+}
+
+.hours p {
+  margin-bottom: 10px;
+  color: var(--text-lighter);
+  position: relative;
+  padding-left: 28px;
+}
+
+.hours p.closed {
+  color: rgba(255, 255, 255, 0.4);
+  font-style: italic;
+}
+
+.hours p::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: 24px;
+  line-height: 0;
+}
+
+.reservation-form {
+  background: rgba(26, 26, 26, 0.5);
+  padding: 50px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: var(--transition-slow);
+}
+
+.reservation-form:hover {
+  border-color: rgba(212, 175, 55, 0.5);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), var(--glow);
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: var(--text-light);
+  font-size: 15px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 15px;
+  transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  background: rgba(212, 175, 55, 0.1);
+  box-shadow: var(--glow);
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.occasion-selector {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.occasion-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-lighter);
+  font-size: 14px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.occasion-btn:hover {
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--gold-light);
+}
+
+.occasion-btn.active {
+  background: var(--gold);
+  color: var(--dark);
+  border-color: var(--gold);
+  box-shadow: var(--glow);
+}
+
+.occasion-icon {
+  font-size: 16px;
+}
+
+.btn-gold {
+  width: 100%;
+  padding: 18px;
+  background: var(--gold);
+  color: var(--dark);
+  border: none;
+  border-radius: var(--radius);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-gold:hover {
+  background: var(--gold-dark);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+}
+
+.btn-gold:active {
+  transform: translateY(-1px);
+}
+
+.btn-gold::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: var(--transition-slow);
+}
+
+.btn-gold:hover::before {
+  left: 100%;
+}
+
+.loading-dots {
+  display: inline-flex;
+  gap: 4px;
+}
+
+.loading-dots span {
+  animation: bounce 1s infinite;
+  display: inline-block;
+}
+
+.loading-dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading-dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+.success-message {
+  text-align: center;
+  padding: 20px;
+}
+
+.success-icon {
+  font-size: 50px;
+  color: var(--gold);
+  margin-bottom: 20px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+.success-message h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: var(--gold-light);
+}
+
+.success-message p {
+  color: var(--text-lighter);
+  margin-bottom: 25px;
+}
+
+.confirmation-details {
+  background: rgba(26, 26, 26, 0.5);
+  border-radius: var(--radius);
+  padding: 15px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.confirmation-details p {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.confirmation-details strong {
+  color: var(--gold-light);
+}
+
+/* Flatpickr Custom Theme */
+.flatpickr-calendar.custom-theme {
+  background: var(--darker);
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.flatpickr-calendar.custom-theme .flatpickr-months,
+.flatpickr-calendar.custom-theme .flatpickr-weekdays {
+  background: var(--gold);
+  color: var(--dark);
+}
+
+.flatpickr-calendar.custom-theme .flatpickr-day {
+  color: var(--text-light);
+}
+
+.flatpickr-calendar.custom-theme .flatpickr-day.selected {
+  background: var(--gold);
+  color: var(--dark);
+  border-color: var(--gold);
+}
+
+.flatpickr-calendar.custom-theme .flatpickr-day.disabled {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .reservation-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .reservation-form {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .reservation-section {
+    padding: 80px 0;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .reservation-text p {
+    font-size: 1rem;
+  }
+  
+  .contact-item {
+    margin-bottom: 15px;
+  }
+  
+  .contact-icon {
+    width: 45px;
+    height: 45px;
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .reservation-form {
+    padding: 30px 20px;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 14px 18px;
+  }
+  
+  .btn-gold {
+    padding: 16px;
+    font-size: 15px;
+  }
+  
+  .occasion-selector {
+    gap: 8px;
+  }
+  
+  .occasion-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}
